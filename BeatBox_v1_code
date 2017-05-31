@@ -9,7 +9,7 @@ import java.awt.event.*;
 import java.net.*;
 import javax.swing.event.*;
 
-public class BeatBox_v1_1_Release {
+public class BeatBox_v1_Release {
     JFrame theFrame;
     JPanel mainPanel;
     JList incomingList;
@@ -35,17 +35,6 @@ public class BeatBox_v1_1_Release {
     }
 
     public void startUp(String name) {
-        userName = name;
-        try {
-            Socket sock = new Socket("127.0.0.1", 4242);
-            out = new ObjectOutputStream(sock.getOutputStream());
-            in = new ObjectInputStream(sock.getInputStream());
-            Thread remote = new Thread(new RemoteReader());
-            remote.start();
-        }
-        catch(Exception ex) {
-            System.out.println("couldn`t connect - you`ll have to play alone.");
-        }
         setUpMidi();
         buildGUI();
     }
