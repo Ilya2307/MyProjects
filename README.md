@@ -1,2 +1,2 @@
 # MyProjects
-All my projects are here.
+Hi! Here you can find my projects.
